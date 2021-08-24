@@ -75,6 +75,7 @@ h1 {
     height: 509px;
     width: 1100px;
     align-items: center;
+    border-radius: 20px;
 }
 
 label {
