@@ -5,8 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/cadastro_aluno.css">
-    <title>Cadastro Aluno</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <!-- <script src="public/Jquery/jquery-3.6.0.min.js"></script> -->
+
+
+    <link rel="stylesheet" href="public/css/cadastro_empresa.css">
+    <script src="public/js/cadastro_empresa.js"></script>
+
+    <title>Cadastro Empresa</title>
 </head>
 
 <body>
@@ -19,11 +26,11 @@
             <div class="marcador_vermelho">
 
             </div>
-            <h1>Cadastro Aluno</h1>
+            <h1>Cadastro Empresa</h1>
         </div>
         <div class="conteudo_cadastro">
-            <div class="div1 cadastro_div" >
-                <label for="txtNome">Nome</label>
+            <div class="div1 cadastro_div">
+                <label for="txtNome">Nome Empresa</label>
                 <input class="input" type="text" name="txtNome" id="txtNome">
             </div>
 
@@ -33,36 +40,44 @@
             </div>
 
             <div class="div3 cadastro_div">
-                 <label for="txtEmail">Email</label>
-                <input  class="input"type="email" name="txtEmail" id="txtEmail">
+                <label for="txtEmail">Email</label>
+                <input class="input" type="email" name="txtEmail" id="txtEmail" onblur="validacaoEmail(txtEmail)">
             </div>
             <div class="div4 cadastro_div">
-                <label for="cboCurso">Curso</label>
-                <select id="cboCurso" name="cboCurso" class="cbo">
-                    <option>GTI</option>
+                <label for="cboCidade">Cidade</label>
+                <select id="cboCidade" name="cboCidade" class="cbo">
+                    <option>Itaquaquecetuba</option>
                 </select>
             </div>
             <div class="div5 cadastro_div">
                 <label for="txtSenha">Senha</label>
                 <input type="password" name="txtSenha" id="txtSenha" class="input">
-             </div>
-             <div class="div6 cadastro_div">
-                <label for="cboSemestre">Semestre</label>
-                <select id="cboSemestre" name="cboSemestre" class="cbo">
-                    <option>5º Semestre</option>
-                </select>
+            </div>
+            <div class="div6 cadastro_div">
+                <label for="txtCnpj">CNPJ</label>
+                <input type="text" name="txtCnpj" id="txtCnpj" class="input ">
             </div>
             <div class="div7 cadastro_div">
                 <label for="txtConfirmaSenha">Confirmar Senha</label>
-                <input type="password" name="txtConfirmaSenha" id="txtConfirmaSenha" class="input"> 
+                <input type="password" name="txtConfirmaSenha" id="txtConfirmaSenha" class="input">
             </div>
 
 
             <div class="div8 cadastro_div">
-                <label for="txtCpf">CPF</label>
-                <input type="text" name="txtCpf" id="txtCpf" class="input">
+                <label for="txtTel">Telefone</label>
+                <input type="tel" name="txtTel" id="txtTel" class="input">
             </div>
 
+
+            <div class="div9 ">
+                <label for="txtCel">Celular</label>
+                <input type="text" name="txtCel" id="txtCel" class="input" data-contato>
+            </div>
+            <!-- <div class="termos">
+                <label for="checkTermos">Termos</label>
+    
+                <input type="checkbox" name="checkTermos" id="checkTermos">
+            </div> -->
         </div>
 
     </div>
@@ -78,10 +93,11 @@
         </div>
         <div class="footer_redes">
             <img src="public/assets/instagram.png" alt="" class="logo-footer">
-            <img src="public/assets/linkedin.png" alt="" class="logo-footer logo-linkedin" >
+            <img src="public/assets/linkedin.png" alt="" class="logo-footer logo-linkedin">
 
         </div>
     </footer>
 </body>
+
 
 </html>
