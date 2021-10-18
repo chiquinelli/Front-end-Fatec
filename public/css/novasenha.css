@@ -1,0 +1,118 @@
+.container{
+    margin-inline:10%;
+}
+nav{
+
+    display: flex;
+    justify-content: space-between;
+    height: 102px;
+    border-bottom: groove;
+    align-items: center;
+}
+
+.img_logo{
+    height:  55px;
+    margin-left: 5%;
+
+}
+.home{
+    text-decoration: none;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 5%;
+}
+.containercentral{
+    display: grid;
+    place-items: center;
+    margin-top: 12%;
+}
+
+.definirsenha{
+    background: #E9E9E9;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.definirsenha p{
+    text-align: center;
+    padding: 10px 0 20px 0;
+    width: 100%;
+    
+}
+.definirsenha h5{
+    padding: 10px 0 0 0;
+}
+.definirsenha form{    
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 20px 0;
+
+}
+input[class="input"]{
+    padding: 10px;
+    border: solid 0.3px black;
+}
+
+.definirsenha .confirmar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    background-color: #bf383a;
+    width: 75%;
+    border-radius: 1.5rem;
+    padding: 5px 0;
+}
+footer {
+    color: var(--cor-branco);
+    background: black;
+    padding: 2em;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    margin-top: 10%;
+}
+.social-icon{
+    display: inline-flex;
+}
+.social-icon a{
+    padding: 0 5px;
+}
+@media screen and (min-width: 400px){
+
+    
+    .containercentral{
+        margin-top: 7%;
+    }
+
+@media screen and (min-width: 500px){
+
+    .definirsenha{
+        padding: 4rem 7rem;
+    }
+    .containercentral{
+        margin-top: 5%;
+    }
+    
+    }
+    @media screen and (min-width: 600px){
+    footer{
+        margin-top: 4%;
+    }
+    
+    }
+    @media screen and (min-width: 700px){
+    .containercentral{
+        margin-top: 2%;
+        
+    }
+    footer{
+        margin-top: 1.5%;
+    }
+    }
+}

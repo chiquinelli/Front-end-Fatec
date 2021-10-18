@@ -1,0 +1,220 @@
+.container-perfil-flex { display: flex; flex-direction: row; width: 100%; height: 90vh; }
+.lado-esquerdo {
+    width: 29%;
+    background: var(--cor-fatec);
+    font-family: 'Sen', sans-serif;
+    font-weight: 700;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+}
+.lado-direito { width: 71%; background: var(--cor-branco); overflow: auto; }
+
+/* Imagem */
+.imagem-perfil > img { max-width: 100%; max-height: 100%;}
+
+.imagem-perfil {
+    margin: 0 2rem;
+    max-width: 10rem;
+    clip-path: circle();
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+input[type="file"] { display: none; }
+
+.input-upload {
+    background: #000;
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 10px 20px;
+    margin: .5rem;
+    border-radius: .5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: filter .7s;
+    cursor: pointer;
+}
+
+.input-upload:hover { filter: brightness(1.7); }
+.texto-perfil {width: 20rem; text-align: center; color: var(--cor-branco);}
+
+.dados-do-perfil {
+    width: 20rem;
+    border-radius: .5rem;
+
+    background: var(--cor-branco);
+    text-align: center;
+    font-family: 'Sen', sans-serif;
+    padding: 1rem 2rem;
+}
+.dados-do-perfil h3 { font-weight: 400;}
+.dados-do-perfil .dados {height: 13rem; text-align: left; font-weight: 400;}
+.dados-do-perfil .dados > p { margin: .5rem 0}
+.botoes-perfil { display: flex; flex-direction: row; justify-content: space-evenly; }
+hr { width: 100%; height: 1px; border: 0px; border-top: 2px solid #E2DFDF; }
+.dados-do-perfil .botao-perfil {
+    background: var(--cor-branco);
+    color: #000;
+    font-weight: bold;
+    border: solid 3px #000;
+    border-radius: .7rem;
+    padding: .6rem 1rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+.dados-do-perfil .botao-perfil:hover { color: var(--cor-branco); background: #000; }
+.texto-perfil-hidden { 
+    display: none; 
+    text-align: center; 
+    margin: 3rem 2rem; 
+    font-family: 'Sen', sans-serif;
+    font-weight: 700;
+}
+/* DIVULGAR VAGA */
+.formulario-divulgar-vaga { 
+    background: var(--cor-cinza-3); 
+    display: grid;
+    place-items: center;
+    padding: 2rem 0;
+
+}
+
+.formulario-divulgar-vaga input[class="input"], .formulario-divulgar-vaga select[class="input"] {
+    border: solid 3px black;
+    padding: 5px;
+    width: 100%
+}
+
+.formulario-divulgar-vaga table { width: 50rem;}
+.quantidade { display: flex; flex-direction: row; }
+.value-button {
+    border: 3px solid #000;
+    margin: 0px;
+    width: 40px;
+    height: 34.5px;
+    text-align: center;
+    padding: 5px 0;
+    background: var(--cor-cinza);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: filter .5s;
+  }
+  
+.value-button:hover { cursor: pointer; filter:brightness(.7)}
+.quantidade #decrease, .quantidade #increase { color: var(--cor-branco);}
+.quantidade #input-wrap { margin: 0px; padding: 0px; }
+  
+input#number {
+    text-align: center;
+    border: none;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+    margin: 0px;
+    width: 40px;
+    height: 34.5px;
+}
+  
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+textarea[class="input"] {
+    width: 100%;
+    height: 8rem;    
+    outline: none;
+    resize: none;
+    border: solid 3px var(--cor-cinza);
+}
+
+.buttons-forms .button {margin: 1.5rem;}
+
+/* FORUM */
+.postagem-forum {
+    width: 50rem;
+    border: solid 3px var(--cor-cinza-2);
+    border-radius: 0 .7rem .7rem .7rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.postagem-forum .input-postagem {
+    width: 100%;
+    height: 6rem;
+    border: none;
+    outline:none;
+    resize: none;
+    font-size: 1rem;
+    color: var(--cor-cinza-2);
+}
+.postagem-forum .buttons-forms .button { margin: .5rem 2rem 0 0; padding: .6rem 2.5rem }
+.grid-postagem {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 17% 83%;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "img-postagem commentario-postagem"
+      "img-postagem elementos-postagem";
+}
+  
+.img-postagem { grid-area: img-postagem; display: flex; flex-direction: column; justify-content: center;}
+  
+.commentario-postagem { grid-area: commentario-postagem; }
+.commentario-postagem > div { margin: .5rem; padding: .8rem .5rem; border-radius: .5rem; background: var(--cor-cinza-3); }
+  
+.elementos-postagem { 
+    grid-area: elementos-postagem; 
+    display: flex; flex-direction: row;
+    align-content: center;
+    justify-content: flex-end
+}
+
+.elementos-postagem > a { margin: 0 1rem; }
+
+.img-postagem .imagem-perfil { margin: 0; max-width: 8rem; clip-path: circle(); }
+.nome-postagem, .status-postagem { font-family: 'Sen', sans-serif; font-weight: 700; font-size: .8rem; text-align: center;}
+.status-postagem { color: var(--cor-fatec);}
+.empresa .container-vaga { width: 45rem; }
+
+/* RESPONSIVIDADE */
+@media (max-width: 1150px) {
+    .imagem-perfil { max-width: 8rem; }
+    .input-upload { font-size: 10px; padding: 8px 10px; }
+    .texto-perfil { font-size: 12px;}
+    .dados-do-perfil, .texto-perfil {width: 15rem;}
+    .dados-do-perfil .dados {height: 10rem; font-size: .7rem;}
+    .dados-do-perfil .botao-perfil {padding: .2rem .2rem;}
+    .formulario-divulgar-vaga table { width: 40rem; padding: 2rem 0;}
+    .postagem-forum { width: 40rem; }
+    .empresa .container-vaga { width: 40rem; }
+}
+
+@media (max-width: 920px){
+    .container-perfil-flex { flex-direction: column; width: 100%; height: 10vh; }
+    .lado-esquerdo { flex-direction: row; width: 100%; }
+    .lado-direito { width: 100%; background: var(--cor-branco); overflow: visible; }
+    .texto-perfil { display: none;}
+    .texto-perfil-hidden { display: block; }
+    .formulario-divulgar-vaga table { width: 30rem;}
+    .buttons-forms .button {margin: 0;}
+    .empresa .container-vaga { width: 30rem; padding: 30px 1rem; }
+}
+
+@media (max-width: 670px) {
+    .postagem-forum { width: 30rem; }
+    .postagem-forum .buttons-forms .button { margin: .5rem 0 0 0;}
+}

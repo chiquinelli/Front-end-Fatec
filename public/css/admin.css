@@ -1,0 +1,114 @@
+.border-table { border: solid 3px var(--cor-cinza); padding: 3rem; background: var(--cor-cinza-3); }
+.buttons-forms .button { margin-bottom: 0; }
+.formulario-divulgar-vaga { background: var(--cor-branco); padding: 0 0 2rem 0; }
+
+.pesquisar-empresas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border: solid 3px var(--cor-cinza);
+    padding: 2rem;
+}
+
+.pesquisar-empresas > label, .campo-input > label { font-size: 1.3rem; margin-right: .5rem;}
+
+.pesquisar-empresas > button, .button-search {
+    background: black;
+    color: var(--cor-branco);
+    padding: .8rem 1rem;
+    border: none;
+
+    cursor: pointer;
+    margin-left: .5rem;
+}
+
+.pesquisar-empresas > button:hover, .botoes-vagas button:hover, .button-search:hover { filter: brightness(1.7); }
+.pesquisar-empresas > .input { width: 25rem;}
+.input-categoria { display: flex; justify-content: end; margin: 2rem 0; }
+.input-categoria > select { width: 15rem; border: solid 3px black; }
+.vaga-empresa { background: var(--cor-cinza-3); border: solid 3px var(--cor-cinza-2); margin: 1rem; }
+.vaga-empresa table { width: 60rem; }
+.vaga-empresa > form { display: flex; flex-direction: row; }
+.botoes-vagas { display:flex; flex-direction: column; justify-content: center; align-items: center; }
+
+.botoes-vagas .button-vagas { 
+    background: black; 
+    color: var(--cor-branco); 
+    margin: .5rem 1.5rem;
+    border: none;
+    width: 3.5rem;
+    height: 1.3rem;
+    border-radius: 2.5rem;
+    cursor: pointer;
+}
+
+.vaga-empresa th, .tabela-alunos th { background: var(--cor-fatec); color: var(--cor-branco); }
+
+.vaga-empresa table, .vaga-empresa th, .vaga-empresa td {
+    border-right: 1px solid black;
+    padding: .3rem .5rem .3rem .5rem;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    text-align: left;
+}
+
+.tabela-alunos table, .tabela-alunos th, .tabela-alunos td {
+    border: 1px solid black;
+    padding: .3rem .5rem .3rem .5rem;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    text-align: left;
+}
+
+.tabela .input, .campo-input .input { width: 100%; height: 1rem; }
+
+.tabela .input-requisito {
+    width: 100%;
+    height: 5rem;
+
+    border: solid 3px var(--cor-cinza);
+    outline: none;
+}
+
+.border { border: solid 3px var(--cor-cinza); }
+.formulario-de-pesquisa { padding: 1.5rem; }
+.formulario-de-pesquisa > .campo-input { display: flex; flex-direction: row; width: 30rem; margin: .5rem 0; }
+.formulario-de-pesquisa .campo-input label { width: 12rem;}
+#situacao {height: 2rem;}
+
+.notificacao { display: flex; justify-content: end; margin: 1rem 1rem 0 0; }
+
+.notificacao > p { 
+    color: var(--cor-branco); 
+    text-decoration: underline;
+    background: var(--cor-fatec);
+    padding: .5rem;
+    border-radius: .3rem;
+}
+.tabela-alunos { margin: 2rem 0; }
+.pendente { color: var(--cor-fatec); }
+.button-vagas.pendente { background: var(--cor-fatec);}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1150px) {
+    .vaga-empresa table { width: 50rem; }
+    .tabela-alunos table, .tabela-alunos th, .tabela-alunos td { font-size: small;}
+}
+
+@media (max-width: 920px){
+    .pesquisar-empresas > .input { width: 15rem;}
+    .vaga-empresa table { width: 40rem; }
+    .vaga-empresa > form { flex-direction: column; }
+    .botoes-vagas { flex-direction: row;}
+    .tabela-alunos .botoes-vagas { flex-direction: column;}
+    .tabela-alunos .botoes-vagas .button-vagas { margin: .5rem 0 }
+    .tabela-alunos table, .tabela-alunos th, .tabela-alunos td { font-size: smaller;}
+}
+
+@media (max-width: 670px) {
+    .pesquisar-empresas > .input { width: 10rem;}
+    .vaga-empresa table { width: 30rem; }
+    .formulario-de-pesquisa { padding: .2rem; }
+    .tabela-alunos table { width: 20.5rem; }
+}

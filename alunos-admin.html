@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./public/css/menu.css">
+    <link rel="stylesheet" href="./public/css/global.css">
+    <link rel="stylesheet" href="./public/css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Sen:wght@700&display=swap" rel="stylesheet">
+    <title>Alunos</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <input type="checkbox" name="" id="check">
+            
+            <div class="logo-container">
+                <img src="./public/assets/logo-fatec.png" alt="logo fatec">
+            </div>
+
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        <li class="nav-link" style="--i: 1.35s">
+                            <a href="#">ALUNOS</a>
+                        </li>
+                        <li class="nav-link" style="--i: 1.35s">
+                            <a href="#" id="exit">SAIR</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="icon-menu-container">
+                <div class="icon-menu">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container-geral-center">
+                <!-- NOTIFICAÇÃO PENDENTES - INICIO -->
+                <div class="notificacao">
+                    <p>9 Solicitações pendentes de Cadastro</p>
+                </div>
+                <!-- NOTIFICAÇÃO PENDENTES - FIM -->
+                <div class="title">
+                    <div class="rect"></div> Alunos
+                </div>
+            </div>
+
+            <div class="center">
+                <!-- Formulário de Pesquisa - INICIO -->
+                <form action="" class="border center formulario-de-pesquisa">
+                    <div class="campo-input">
+                        <label for="pesquisar">Aluno</label>
+                        <input type="text" id="pesquisar" class="input" placeholder="Nome do Aluno">
+                    </div>
+                    <div class="campo-input">
+                        <label for="pesquisar">Nome da Mãe</label>
+                        <input type="text" id="pesquisar" class="input" placeholder="Nome da Mãe">
+                    </div>
+                    <div class="campo-input">
+                        <label for="situacao">Situação</label>
+                        <select class="input border" aria-label="Default select example" id="situacao" name="curso">
+                            <option selected>Selecione uma situação</option>
+                            <option value="Pendente">Pendente</option>
+                            <option value="Cadastrado">Cadastrado</option>
+                        </select>
+                    </div>
+                    <div class="center">
+                        <button type="submit" class="button-search">Procurar</button>
+                    </div>
+                </form>   
+                <!-- Formulário de Pesquisa - FIM -->  
+            </div>
+            <!-- TABELA DE ALUNO - INICIO -->
+            <div class="center">
+                <div class="tabela-alunos">
+                    <table>
+                        <tr>
+                            <th>Nome do Aluno</th>
+                            <th>Nome da Mãe</th>
+                            <th>CPF</th>
+                            <th>Curso</th>
+                            <th>Semestre</th>
+                            <th>Situação</th>
+                            <th></th>
+                        </tr>
+                        <!-- TEMPLATE USUÁRIOS - INICIO -->
+                        <tr>
+                            <td>Rodrigo Álvarez Cabral</td>
+                            <td>Maria Álvarez Cabral</td>
+                            <td>00000000000</td>
+                            <td>Gestão da T.I</td>
+                            <td>5° Semestre</td>
+                            <td class="pendente">Pendente</td>
+                            <td class="botoes-vagas">
+                                <button class="button-vagas">Excluir</button>
+                                <button class="button-vagas pendente">Aceitar</button>
+                            </td>
+                        </tr>
+                        <!-- TEMPLATE USUÁRIOS - FIM -->
+                        
+                        <!-- ÁREA REMOVÍVEL - INICIO -->
+                        <tr>
+                            <td>Marcelo Santos da silva</td>
+                            <td>Maria Álvarez Cabral</td>
+                            <td>00000000000</td>
+                            <td>Secretariado</td>
+                            <td>5° Semestre</td>
+                            <td>Pendente</td>
+                            <td class="botoes-vagas">
+                                <button class="button-vagas">Editar</button>
+                                <button class="button-vagas">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pedro henrique souza de melo</td>
+                            <td>Maria Álvarez Cabral</td>
+                            <td>00000000000</td>
+                            <td>Gestão Comercial</td>
+                            <td>5° Semestre</td>
+                            <td>Pendente</td>
+                            <td class="botoes-vagas">
+                                <button class="button-vagas">Editar</button>
+                                <button class="button-vagas">Excluir</button>
+                            </td>
+                        </tr>
+                        <!-- ÁREA REMOVÍVEL - FIM -->
+                    </table>
+                </div>
+            </div>
+            <!-- TABELA DE ALUNO - FIM -->
+             
+        </section>
+    </main>
+</body>
+
+</html>

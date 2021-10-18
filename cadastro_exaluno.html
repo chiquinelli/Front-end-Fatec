@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/cadastro_aluno.css">
+    <link rel="stylesheet" href="./public/css/arq_de_mudancas.css">
     <title>Cadastro Ex-Aluno</title>
 </head>
 
@@ -19,7 +20,7 @@
             <div class="marcador_vermelho">
 
             </div>
-            <h1>Cadastro Ex-Aluno</h1>
+            <h1>Cadastro Egresso</h1>
         </div>
         <div class="conteudo_cadastro">
             <div class="div1 cadastro_div" >
@@ -29,7 +30,10 @@
 
             <div class="div2 cadastro_div">
                 <input type="image" src="public/assets/perfil.png" alt="" id="imgPerfil">
-                <input type="button" value="Escolher imagem" id="btnImagem">
+                <label class="input-upload center">
+                    <input type="file" name="" id=""> <!-- ENTRADA DE IMAGEM -->
+                    ESCOLHER IMAGEM
+                </label>
             </div>
 
             <div class="div3 cadastro_div">
@@ -45,6 +49,7 @@
             <div class="div5 cadastro_div">
                 <label for="txtSenha">Senha</label>
                 <input type="password" name="txtSenha" id="txtSenha" class="input">
+                <div id="message-password"></div>
              </div>
              <!-- <div class="div6 cadastro_div">
                 <label for="cboSemestre">Semestre</label>
@@ -66,6 +71,15 @@
         </div>
 
     </div>
+    <!-- CHECKBOX - POLÍTICAS DE PRIVACIDADE - INICIO -->
+    <div class="center">
+        <div class="termos-e-privacidade">
+            <input type="checkbox" name="" id="politicas">
+            <label for="politicas">
+                Eu li e concordo com os <a href="#politica-de-privacidade">Termos de Uso e Política de Privacidade</a>.
+        </div>
+    </div>
+    <!-- CHECKBOX - POLÍTICAS DE PRIVACIDADE - FIM -->
     <div class="conteudo_botao">
         <button class="btn_cadastro">Cadastrar</button>
     </div>
@@ -82,6 +96,17 @@
 
         </div>
     </footer>
+    <!-- MODAL - POLÍTICAS DE PRIVACIDADE - INICIO -->
+    <div class="modal" id="politica-de-privacidade">
+        <div>
+          <a href="#" class="close">x</a>
+          <h1>Política de Privacidade</h1>
+          <div id="texto-politica"></div>
+        </div>
+    </div>
+    <script src="./public/js/politica.js"></script>
+    <!-- MODAL - POLíTICAS DE PRIVACIDADE - FIM -->
+    <script src="./public/js/mascara_egresso.js"></script>
 </body>
 
 </html>

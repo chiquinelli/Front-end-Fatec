@@ -1,0 +1,129 @@
+input[type="file"] { display: none; }
+
+.input-upload {
+    font-size: .8rem;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    margin: .5rem;
+    border-radius: .5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: filter .7s;
+    cursor: pointer;
+}
+
+.input-upload:hover, .close:hover { filter: brightness(1.7); }
+
+.termos-e-privacidade {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #E9E9E9;
+    width: 1100px;
+    border-radius: 0 0 20px 20px;
+}
+.conteudo_cadastro { border-radius: 20px 20px 0 0; }
+.termos-e-privacidade > input { accent-color: #bf383a; }
+
+.termos-e-privacidade a {
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 0;
+    text-decoration: underline;
+    color: #bf383a;
+}
+#texto-politica { overflow: auto; height: 30rem; text-align: justify; font-family: Roboto, sans-serif;}
+#texto-politica::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-right: 10px;
+    background: #E9E9E9;
+}
+
+#texto-politica::-webkit-scrollbar-thumb {
+    background-color: #bf383a;
+    border-radius: 1rem;
+}
+
+#texto-politica li { font-weight: bold; }
+#texto-politica ol[type="A"] > li, #texto-politica ol[type="1"] > li { font-weight: 200; }
+
+.center { display: flex; justify-content: center;}
+
+/* MODAL - POLÍTICAS DE PRIVACIDADE - INICIO */
+.modal {
+    position: fixed;
+    background: var(--color1-transparent);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+  
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.418);
+}
+  
+.modal > div {
+    width: 65rem;
+    height: 30rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2.2em;
+    background: #fff;
+}
+  
+.buttons-modal {
+    margin-top: 4rem;
+}
+  
+.close {
+    color: #000;
+    line-height:45px;
+    font-size: 22px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.modal h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: #000;
+ }
+
+/* MODAL - POLÍTICAS DE PRIVACIDADE - FIM */
+
+/* RESPONSIVIDADE - MODAL */
+@media (max-width: 1200px){ 
+    .modal > div { width: 50rem;}
+}
+@media (max-width: 992px){ 
+    .modal > div { width: 40rem;}
+}
+@media (max-width: 768px){
+    .modal > div { width: 30rem;}
+}
+@media (max-width: 600px){
+    .modal > div { width: 97%; height: 90%;}
+    #texto-politica { height: 100%;}
+}

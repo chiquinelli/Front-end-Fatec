@@ -108,3 +108,53 @@ input[class="input"] {
  footer a {
     color: var(--cor-branco);
  }
+
+ /* Textos Carta de equivalencia | Estágio */
+.content-texto { 
+    width: 60rem;
+    padding: 1rem;
+}
+.content-texto > p {
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+.content-texto > .link-download {
+    text-align: center; 
+    text-decoration: underline;
+    font-weight: 700; 
+    margin: 2rem;
+}
+.content-texto ._title {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.lista-curriculo {
+    margin-bottom: 1rem;
+}
+
+.lista-curriculo {
+    list-style: outside;
+    margin-left: 2rem;
+}
+
+@media (max-width: 970px) {
+    .content-texto { 
+        width: 50rem;
+    }
+}
+@media (max-width: 810px) {
+    .content-texto { 
+        width: 40rem;
+    }
+}
+@media (max-width: 650px) {
+    .content-texto {
+        width: 30rem;
+    }
+}
+@media (max-width: 490px){
+    .content-texto {
+        width: 20rem;
+    }
+}

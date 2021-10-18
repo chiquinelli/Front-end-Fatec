@@ -1,0 +1,131 @@
+.container{
+    margin-inline:10%;
+}
+.cabecalho{
+    display: flex;
+    flex-direction: inline;
+    padding: 5px;
+    justify-content: space-between;
+}
+nav{
+
+    display: flex;
+    justify-content: space-between;
+    height: 102px;
+    border-bottom: groove;
+    align-items: center;
+}
+
+.img_logo{
+    height:  55px;
+    margin-left: 5%;
+
+}
+.home{
+    text-decoration: none;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 5%;
+}
+.cabecalho .logofatec{
+    text-align: left;
+}
+
+.cabecalho img{
+    width: 100px;
+}
+
+
+
+.containercentral{
+    display: grid;
+    place-items: center;
+    margin-top: 30%;
+}
+.email{
+    background: #E9E9E9;
+    border-radius: 1.5rem;
+    padding: 1rem 0.4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.email form{    
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 20px;
+}
+.email .cadeado{
+    padding: 0 0 20px 0;
+}
+.email p{
+    text-align: center;
+    padding: 0 0 20px 0;
+    width: 100%;
+    
+}
+.email .text1{
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
+input[class="input"]{
+    padding: 10px;
+    border: solid 0.3px black;
+}
+.email .enviarlink{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    background-color: #bf383a;
+    width: 75%;
+    border-radius: 1.5rem;
+    padding: 5px 0;
+}
+
+footer {
+    color: var(--cor-branco);
+    background: black;
+    padding: 2em;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    margin-top: 23%;
+}
+.social-icon{
+    display: inline-flex;
+}
+.social-icon a{
+    padding: 0 5px;
+}
+
+@media screen and (min-width: 500px){
+
+.email{
+    padding: 5rem;
+}
+.containercentral{
+    margin-top: 10%;
+}
+.email .enviarlink{
+    width: 50%;
+}
+footer {
+    margin-top: 10%;
+}
+}
+
+
+@media screen and (min-width: 800px){
+.containercentral{
+    margin-top: 5%;
+}
+footer {
+    margin-top: 4.4%;
+}
+}

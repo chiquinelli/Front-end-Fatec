@@ -1,0 +1,89 @@
+/* ESTILIZAÇÃO */
+.input-search > div {
+    border: solid 3px #000;
+    border-radius: 2.5rem;
+    width: 35.5rem;
+
+    display: flex;
+    flex-direction: row;
+}
+.input-search > div input { outline: none; width: 100%; border: none; }
+.input-search > div i { font-size: 1.5rem; color: #c5c5c5; }
+.input-search > div i, .input-search > div input { margin: .5rem .5rem; }
+.ola-usuario { text-align: center; margin: 0 2rem}
+.ola-usuario > span { font-weight: bold; }
+
+/* CARDS VAGAS */
+.container-vaga {
+    width: 60rem;
+    padding: 30px 5rem;
+    margin-top: 2rem;
+    border:solid 2px var(--cor-cinza-2);
+    border-radius: .7rem;
+    background: var(--cor-cinza-3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.dados-da-vaga{ display: flex; flex-direction: row; }
+.imagem-empresa > img { max-width: 100%; max-height: 100%;}
+
+.imagem-empresa {
+    margin: 0 2rem;
+    max-width: 6rem;
+    clip-path: circle();
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.informacao-vaga, .imagem-empresa{ display: flex; flex-direction: column; justify-content: center; }
+.informacao-vaga > h3 { font-size: 1.5rem; text-transform: uppercase;}
+.nome-da-vaga { 
+    font-size: 1.3rem; 
+    font-weight: 900; 
+    color: var(--cor-fatec); 
+    text-transform: uppercase;
+    margin: .5rem;
+}
+
+.container-vaga .requisitos-vaga { background: var(--cor-cinza-2); padding: 1rem 3.5rem; border-radius: .7rem; }
+.container-vaga .requisitos-vaga > h4 { font-size: 1.2rem;}
+.info-adicionais-sobre-vaga { display: flex; flex-direction: row; text-transform: uppercase; }
+.info-adicionais-sobre-vaga > div { margin: 1rem;}
+.vagas:last-child { margin-bottom: 2rem;}
+
+/* PAGINAÇÃO */
+#pagination-container ul { 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    margin: 2rem; 
+}
+
+#pagination-container li { margin: .5rem; padding: .5rem .8rem; ;border-radius: 2.5rem; }
+/* #pagination-container a {padding: 10rem;} */
+#pagination-container .active  { color: var(--cor-branco); background: #000; }
+
+/* RESPONSIVIDADE */
+@media (max-width: 970px){
+    .container-vaga { width: 50rem; }
+}
+
+@media (max-width: 810px){
+    .container-vaga { width: 40rem; }
+    .info-adicionais-sobre-vaga > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 650px){
+    .input-search > div { width: 25.5rem; }
+    .container-vaga { width: 30rem; }
+    .container-vaga { padding: 30px 1rem; }
+    .imagem-empresa { max-width: 5rem;}
+}
+
+@media (max-width: 490px){
+    .container-vaga { width: 25rem; }
+}

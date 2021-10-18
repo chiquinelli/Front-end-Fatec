@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./public/css/menu.css">
+    <link rel="stylesheet" href="./public/css/global.css">
+    <link rel="stylesheet" href="./public/css/grid.css">
+    <link rel="stylesheet" href="./public/css/vagas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Sen:wght@400;700&display=swap" rel="stylesheet">
+    <title>Divulgar Vagas</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <input type="checkbox" name="" id="check">
+            
+            <div class="logo-container">
+                <img src="./public/assets/logo-fatec.png" alt="logo fatec">
+            </div>
+
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        
+                        <li class="nav-link" style="--i: 1.35s">
+                            <a href="#" id="exit">SAIR</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="icon-menu-container">
+                <div class="icon-menu">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container-perfil-flex">
+                <div class="lado-esquerdo">
+                    <!-- IMAGEM DO PERFIL -->
+                    <div class="altera-image">
+                        <div class="imagem-perfil center">
+                            <img src="./public/assets/imagem-teste.jpg" alt="imagem da empresa">
+                        </div>
+                        <label class="input-upload center">
+                            <input type="file" name="" id="">
+                            ALTERAR IMAGEM
+                        </label>
+                    </div>
+                    <!-- QUANTIDADE DE VAGAS -->
+                    <div class="texto-perfil">
+                        Olá, até o momento você divulgou <span id=" ">0</span> vagas em nossa plataforma.
+                    </div>
+                    <!-- DADOS DA EMPRESA -->
+                    <div class="dados-do-perfil">
+                        <h3>Dados da empresa</h3>
+                        <div class="dados">
+                            <p>Nome: Empresa X</p>
+                            <p>E-mail: exemplo@gmail.com</p>
+                            <hr>
+                            <p>Tel: (00) 0000-0000</p>
+                            <p>Cel: (00) 00000-0000</p>
+                            <hr>
+                            <p>Cidade: Itaquaquecetuba</p>
+                            <hr>
+                            <p>CNPJ: xx.xxx.xxx/xxxx-xx</p>
+                        </div>
+                        <div class="botoes-perfil">
+                            <button class="botao-perfil">Editar conta</button>
+                            <button class="botao-perfil">Excluir conta</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lado-direito">
+                    <p class="texto-perfil-hidden">Olá, até o momento você divulgou <span id=" ">0</span> vagas em nossa plataforma.</p>
+                    <div class="title">
+                        <div class="rect"></div> Divulgar Vagas
+                    </div>
+
+                    <div class="formulario-divulgar-vaga">
+                        <form>
+                            <table>
+                                <tr>
+                                    <td colspan="2">
+                                        <label for="">Nome da Vaga</label>
+                                        <br><input type="text" name="" id="" class="input">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <label for="">Regime do Estágio (Horário e dias da Semana)</label>
+                                        <br><input type="text" name="" id="" class="input">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="">Curso de Interesse</label>
+                                        <br><select class="input" aria-label="Default select example" id="select-curso" name="curso"></select>
+                                    </td>
+                                    <td>
+                                        <label for="">Quantidade de Vagas</label>
+                                        <!-- <br><input type="number" name="" id="" class="input"> -->
+                                        <div class="quantidade">
+                                            <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                                            <input type="number" id="number" value="1" />
+                                            <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <label for="">Perfil da Vaga</label><br>
+                                        <textarea name="" id="" class="input" placeholder="Descreva sobre o perfil da vaga."></textarea>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="buttons-forms center">
+                                <button type="submit" class="button">Publicar</button>
+                            </div>
+                        </form>
+
+                        
+                    </div>
+                    <div class="vagas empresa center">
+                        <!-- ARÉA PARA RECEBER VAGAS - INICIO TEMPLATE -->
+                        <div class="container-vaga">
+                            
+                            <div class="dados-da-vaga">
+                                <div class="imagem-empresa">
+                                    <img src="./public/assets/imagem-teste.jpg" alt="imagem da empresa">
+                                </div>
+                                <div class="informacao-vaga">
+                                    <h3>Nome da Empresa</h3>
+                                    <h4>emailempresa@gmail.com</h4>
+                                    <h4>(11) 95555-4444 / (11) 95555-4444</h4>
+                                </div>
+                            </div>
+                            <div class="nome-da-vaga center">Estágio - desenvolvimento web</div>
+                            <div class="requisitos-vaga">
+                                <h4>Perfil da vaga:</h4>
+                                <p>Habilidade no uso do GIT; 
+                                    Conhecimento básico sobre Docker; 
+                                    Conhecimento geral sobre HTML, CSS, Javascript, REST, e outras tecnologias associadas às aplicações web; 
+                                    Noções sobre o funcionamento do processo de desenvolvimento ágil Kanban. </p>
+                            </div>
+                    
+                            <div class="info-adicionais-sobre-vaga center">
+                                <div>
+                                    <i class="fas fa-briefcase"></i>
+                                    2 vagas
+                                </div>
+                                <div>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    São Paulo -SP
+                                </div>
+                                <div>
+                                    <i class="far fa-clock"></i>
+                                    8H às 15H, de Segunda à Sexta
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-vaga">
+                            
+                            <div class="dados-da-vaga">
+                                <div class="imagem-empresa">
+                                    <img src="./public/assets/imagem-teste.jpg" alt="imagem da empresa">
+                                </div>
+                                <div class="informacao-vaga">
+                                    <h3>Nome da Empresa</h3>
+                                    <h4>emailempresa@gmail.com</h4>
+                                    <h4>(11) 95555-4444 / (11) 95555-4444</h4>
+                                </div>
+                            </div>
+                            <div class="nome-da-vaga center">Estágio - desenvolvimento web</div>
+                            <div class="requisitos-vaga">
+                                <h4>Perfil da vaga:</h4>
+                                <p>Habilidade no uso do GIT; 
+                                    Conhecimento básico sobre Docker; 
+                                    Conhecimento geral sobre HTML, CSS, Javascript, REST, e outras tecnologias associadas às aplicações web; 
+                                    Noções sobre o funcionamento do processo de desenvolvimento ágil Kanban. </p>
+                            </div>
+                    
+                            <div class="info-adicionais-sobre-vaga center">
+                                <div>
+                                    <i class="fas fa-briefcase"></i>
+                                    2 vagas
+                                </div>
+                                <div>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    São Paulo -SP
+                                </div>
+                                <div>
+                                    <i class="far fa-clock"></i>
+                                    8H às 15H, de Segunda à Sexta
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-vaga">
+                            
+                            <div class="dados-da-vaga">
+                                <div class="imagem-empresa">
+                                    <img src="./public/assets/imagem-teste.jpg" alt="imagem da empresa">
+                                </div>
+                                <div class="informacao-vaga">
+                                    <h3>Nome da Empresa</h3>
+                                    <h4>emailempresa@gmail.com</h4>
+                                    <h4>(11) 95555-4444 / (11) 95555-4444</h4>
+                                </div>
+                            </div>
+                            <div class="nome-da-vaga center">Estágio - desenvolvimento web</div>
+                            <div class="requisitos-vaga">
+                                <h4>Perfil da vaga:</h4>
+                                <p>Habilidade no uso do GIT; 
+                                    Conhecimento básico sobre Docker; 
+                                    Conhecimento geral sobre HTML, CSS, Javascript, REST, e outras tecnologias associadas às aplicações web; 
+                                    Noções sobre o funcionamento do processo de desenvolvimento ágil Kanban. </p>
+                            </div>
+                    
+                            <div class="info-adicionais-sobre-vaga center">
+                                <div>
+                                    <i class="fas fa-briefcase"></i>
+                                    2 vagas
+                                </div>
+                                <div>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    São Paulo -SP
+                                </div>
+                                <div>
+                                    <i class="far fa-clock"></i>
+                                    8H às 15H, de Segunda à Sexta
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim -->
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="./public/js/divulgar-vagas.js"></script>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./public/css/menu.css">
+    <link rel="stylesheet" href="./public/css/global.css">
+    <link rel="stylesheet" href="./public/css/grid.css">
+    <link rel="stylesheet" href="./public/css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Sen:wght@700&display=swap" rel="stylesheet">
+    <title>Aréa de Vagas</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <input type="checkbox" name="" id="check">
+            
+            <div class="logo-container">
+                <img src="./public/assets/logo-fatec.png" alt="logo fatec">
+            </div>
+
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        <li class="nav-link" style="--i: 1.35s">
+                            <a href="#">ALUNOS</a>
+                        </li>
+                        <li class="nav-link" style="--i: 1.35s">
+                            <a href="#" id="exit">SAIR</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="icon-menu-container">
+                <div class="icon-menu">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container-geral-center">
+                <div class="title">
+                    <div class="rect"></div> Divulgar Vagas
+                </div>
+
+                <div class="formulario-divulgar-vaga">
+                    <form>
+                        <table class="border-table">
+                            <tr>
+                                <td colspan="2">
+                                    <label for="nome-da-empresa">Nome da Empresa</label>
+                                    <br><input type="text" name="" id="nome-da-empresa" class="input">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label for="nome-da-vaga">Nome da Vaga</label>
+                                    <br><input type="text" name="" id="nome-da-vaga" class="input">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label for="horario">Regime do Estágio (Horário e dias da Semana)</label>
+                                    <br><input type="text" name="" id="horario" class="input">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="select-curso">Curso de Interesse</label>
+                                    <br><select class="input" aria-label="Default select example" id="select-curso" name="curso"></select>
+                                </td>
+                                <td>
+                                    <label for="">Quantidade de Vagas</label>
+                                    <div class="quantidade">
+                                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                                        <input type="number" id="number" value="1" />
+                                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label for="cidade">Cidade</label>
+                                    <br><input type="text" name="" id="cidade" class="input">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label for="telefone">Telefone</label>
+                                    <br><input type="text" name="" id="telefone" class="input">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label for="imagem">Imagem</label><br>
+                                    <label class="input-upload center">
+                                        <input type="file" name="" id=""> <!-- ENTRADA DE IMAGEM -->
+                                        ESCOLHER IMAGEM
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label for="">Perfil da Vaga</label><br>
+                                    <textarea name="" id="" class="input" placeholder="Descreva sobre o perfil da vaga."></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="buttons-forms center">
+                                        <button type="submit" class="button">Publicar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </form> 
+                </div>
+
+                <div class="title">
+                    <div class="rect"></div> Vagas Divulgadas
+                </div>
+
+                <div class="center">
+                    <div class="pesquisar-empresas">
+                        <label for="pesquisar">Empresa</label>
+                        <input type="text" id="pesquisar" class="input" placeholder="Nome da Empresa">
+                        <button type="submit">Procurar</button>
+                    </div>
+                    <div class="input-categoria">
+                        <select class="input" aria-label="Default select example" id="select-curso" name="curso">
+                            <option value="todas as vagas">Todas as Vagas</option>
+                            <option value="gestão comercial">Gestão Comercial</option>
+                            <option value="gestão da T.I">Gestão da T.I</option>
+                            <option value="secretariado">Secretariado</option>
+                            <option value="gestão empresarial">EAD - Gestão Empresarial</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="center">
+                    <!-- VAGAS - TEMPLATE - INICIO -->
+                    <div class="vaga-empresa">
+                        <form>
+                            <div class="tabela">
+                                <table>
+                                    <tr>
+                                        <th>Empresa</th>
+                                        <th>Vaga</th>
+                                        <th>Regime de Estágio</th>
+                                        <th>Qts Vagas</th>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="" value="Accenture" class="input"></td>
+                                        <td><input type="text" name="" value="Estágio em Desenvolvimento Web" class="input"></td>
+                                        <td><input type="text" name="" value="Seg - Sex  (13h à 18h)" class="input"></td>
+                                        <td><input type="text" name="" value="2" class="input"></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="1">Curso de destino</th>
+                                        <th colspan="3">Requisitos da Vaga</th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1"><input type="text" name="" value="Gestão da T.I" class="input"></td>
+                                        <td colspan="3"><textarea name="" class="input-requisito">Requisitos da Vaga</textarea></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="botoes-vagas">
+                                <button class="button-vagas">Editar</button>
+                                <button class="button-vagas">Excluir</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- VAGAS - TEMPLATE - FIM -->
+
+                    <!-- ÁREA REMOVÍVEL - INICIO -->
+                    <div class="vaga-empresa">
+                        <form>
+                            <div class="tabela">
+                                <table>
+                                    <tr>
+                                        <th>Empresa</th>
+                                        <th>Vaga</th>
+                                        <th>Regime de Estágio</th>
+                                        <th>Qts Vagas</th>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="" value="Accenture" class="input"></td>
+                                        <td><input type="text" name="" value="Estágio em Secretariado" class="input"></td>
+                                        <td><input type="text" name="" value="Seg - Sex  (13h à 18h)" class="input"></td>
+                                        <td><input type="text" name="" value="1" class="input"></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="1">Curso de destino</th>
+                                        <th colspan="3">Requisitos da Vaga</th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1"><input type="text" name="" value="secretariado" class="input"></td>
+                                        <td colspan="3"><textarea name="" class="input-requisito">Requisitos da Vaga</textarea></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="botoes-vagas">
+                                <button class="button-vagas">Editar</button>
+                                <button class="button-vagas">Excluir</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="vaga-empresa">
+                        <form>
+                            <div class="tabela">
+                                <table>
+                                    <tr>
+                                        <th>Empresa</th>
+                                        <th>Vaga</th>
+                                        <th>Regime de Estágio</th>
+                                        <th>Qts Vagas</th>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="" value="Accenture" class="input"></td>
+                                        <td><input type="text" name="" value="Estágio em Dados" class="input"></td>
+                                        <td><input type="text" name="" value="Seg - Sex  (13h à 18h)" class="input"></td>
+                                        <td><input type="text" name="" value="2" class="input"></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="1">Curso de destino</th>
+                                        <th colspan="3">Requisitos da Vaga</th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1"><input type="text" name="" value="Gestão da T.I" class="input"></td>
+                                        <td colspan="3"><textarea name="" class="input-requisito">Requisitos da Vaga</textarea></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="botoes-vagas">
+                                <button class="button-vagas">Editar</button>
+                                <button class="button-vagas">Excluir</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- ÁREA REMOVÍVEL - FIM  -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./public/js/divulgar-vagas.js"></script>
+</body>
+
+</html>
